@@ -1,0 +1,92 @@
+get:
+  tags:
+    - Budget
+  summary: Get Budget by Id
+  description: Retrieves the budget data by the budget Id 
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "6",
+    "Value": {
+        "$id": "7",
+        "IdOrcamento": 283935,
+        "CodigoEmpresa": 1,
+        "Uf": "RS",
+        "ValorLiquido": 140,
+        "ValorIpi": 0,
+        "ValorSubIcms": 0,
+        "ValorFrete": 0,
+        "TipoFrete": "O",
+        "Itens": {
+            "$id": "8",
+            "$values": [
+                {
+                    "$id": "9",
+                    "IdItem": 1069675,
+                    "CodigoItem": "101718",
+                    "Quantidade": 10,
+                    "ValorLiquido": 140,
+                    "ValorIpi": 0,
+                    "ValorSubIcms": 0
+                }
+            ]
+        }
+    },
+    "InnerSingleStatuses": [],
+    "Succeeded": true,
+    "AnySucceeded": false,
+    "Failed": false,
+    "AllFailed": false,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "",
+    "Exception": null
+}
+    "400":
+      description: Internal Server Error 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "11",
+    "Value": null,
+    "InnerSingleStatuses": [
+        {
+            "$id": "12",
+            "ErrorMessage": "ORA-01403: dados não encontrados\nORA-06512: em \"FOCCO3I.DB_COM_PEDIDOS_VENDA\", line 601\nORA-06512: em \"FOCCO3I.FOCCO3I_WEBSERVICE\", line 10534\nORA-06512: em line 1",
+            "Exception": null,
+            "Succeeded": false,
+            "Failed": true
+        }
+    ],
+    "Succeeded": false,
+    "AnySucceeded": false,
+    "Failed": true,
+    "AllFailed": true,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "ORA-01403: dados não encontrados\nORA-06512: em \"FOCCO3I.DB_COM_PEDIDOS_VENDA\", line 601\nORA-06512: em \"FOCCO3I.FOCCO3I_WEBSERVICE\", line 10534\nORA-06512: em line 1",
+    "Exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

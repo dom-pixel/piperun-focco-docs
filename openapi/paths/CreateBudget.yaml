@@ -1,0 +1,107 @@
+post:
+  tags:
+    - Budget
+  summary: Criar orçamento
+  description: Cria um Orçamento
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "21",
+    "Value": {
+        "$id": "22",
+        "$type": "Focco.Framework.DataAccess.BaseDatabase+<Query>d__41`1[[Focco.ERP.Core.Commands.Comercial.Ecommerce.WebServices.CriaItemOrcamentoCompletoCommand+Result, Focco.ERP.Core]], Focco.Framework.DataAccess",
+        "$values": [
+            {
+                "$id": "23",
+                "IdOrcamento": 283935,
+                "CodigoEmpresa": 1,
+                "Uf": "RS",
+                "ValorFrete": 0,
+                "TipoFrete": "O",
+                "IdItem": 1075495,
+                "ValorLiquido": 14,
+                "ValorIpi": 0,
+                "ValorSubIcms": 0,
+                "TipoDctAcr": null,
+                "TipoVlrDctAcr": null,
+                "VlrDctAcr": 0
+            }
+        ]
+    },
+    "InnerSingleStatuses": [],
+    "Succeeded": true,
+    "AnySucceeded": false,
+    "Failed": false,
+    "AllFailed": false,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "",
+    "Exception": null
+}
+    "400":
+      description: Internal Server Error 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+                  "$id": "4",
+                  "Value": null,
+                  "InnerSingleStatuses": [
+                      {
+                          "$id": "5",
+                          "ErrorMessage": "Orçamento não encontrado.",
+                          "Exception": null,
+                          "Succeeded": false,
+                          "Failed": true
+                      }
+                  ],
+                  "Succeeded": false,
+                  "AnySucceeded": false,
+                  "Failed": true,
+                  "AllFailed": true,
+                  "BaseErrorMessage": null,
+                  "ErrorMessage": "Orçamento não encontrado.",
+                  "Exception": null
+              }
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          example:
+            {
+              "codigoCliente": 243242,
+              "orcamentoId": 283935,
+              "codigoCondPagamento": 12,
+              "codigoRepresentante": 14,
+              "codigoItem": "101718",
+              "quantidade": 1,
+              "tipoDctAcr": "a",
+              "tipoVlrDctAcr": "1",
+              "vlrDctAcr": 10,
+              "mascaraId": 1
+          }
+    required: true
