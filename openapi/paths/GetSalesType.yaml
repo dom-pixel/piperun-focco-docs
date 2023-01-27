@@ -1,0 +1,191 @@
+get:
+  tags:
+    - Customer
+  summary: Get Sale types
+  description: Retrieve the Sale types!
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "cod_tabela": 5,
+            "descricao": "PECAS REPOSICAO CLIENTE FINAL"
+        },
+        {
+            "cod_tabela": 6,
+            "descricao": "PECAS REPOSICAO NAO CREDENCIADA"
+        },
+        {
+            "cod_tabela": 7,
+            "descricao": "PECAS REPOSICAO CREDENCIADA"
+        },
+        {
+            "cod_tabela": 8,
+            "descricao": "PECAS REPOSICAO GARANTIA"
+        },
+        {
+            "cod_tabela": 10,
+            "descricao": "PEÇAS NÃO EXPLODIDAS"
+        },
+        {
+            "cod_tabela": 11,
+            "descricao": "EXPORTACAO"
+        },
+        {
+            "cod_tabela": 12,
+            "descricao": "CONSUMO"
+        },
+        {
+            "cod_tabela": 14,
+            "descricao": "SUCATA - COMPRAS"
+        },
+        {
+            "cod_tabela": 18,
+            "descricao": "FERRAMENTAS"
+        },
+        {
+            "cod_tabela": 28,
+            "descricao": "PREÇO SUGERIDO"
+        },
+        {
+            "cod_tabela": 32,
+            "descricao": "ACESSORIOS"
+        },
+        {
+            "cod_tabela": 33,
+            "descricao": "ARMAZEM EXTERNO"
+        },
+        {
+            "cod_tabela": 43,
+            "descricao": "ACESSORIOS CIOSP 2019"
+        },
+        {
+            "cod_tabela": 59,
+            "descricao": "GRUPO HS"
+        },
+        {
+            "cod_tabela": 80,
+            "descricao": "ACESSORIOS CLIENTE FINAL"
+        },
+        {
+            "cod_tabela": 90,
+            "descricao": "PDV CIOSP C/ IPI 2023"
+        },
+        {
+            "cod_tabela": 91,
+            "descricao": "PDV CIOSP S/ IPI 2023"
+        },
+        {
+            "cod_tabela": 92,
+            "descricao": "FGM CIOSP C/ IPI"
+        },
+        {
+            "cod_tabela": 93,
+            "descricao": "FGM CIOSP S/ IPI"
+        },
+        {
+            "cod_tabela": 100,
+            "descricao": "TABELA GENERICA"
+        },
+        {
+            "cod_tabela": 117,
+            "descricao": "A PRAZO ICMS 12% 04/2022"
+        },
+        {
+            "cod_tabela": 118,
+            "descricao": "Á VISTA ICMS 12% 04/2022"
+        },
+        {
+            "cod_tabela": 119,
+            "descricao": "A PRAZO ICMS 7%  04/2022"
+        },
+        {
+            "cod_tabela": 123,
+            "descricao": "A PRAZO ICMS 12% 05/2022"
+        },
+        {
+            "cod_tabela": 124,
+            "descricao": "Á VISTA ICMS 12% 05/2022"
+        },
+        {
+            "cod_tabela": 125,
+            "descricao": "A PRAZO ICMS 7%  05/2022"
+        },
+        {
+            "cod_tabela": 126,
+            "descricao": "Á VISTA ICMS 7% 05/2022"
+        },
+        {
+            "cod_tabela": 127,
+            "descricao": "A PRAZO ICMS 18% 05/2022"
+        },
+        {
+            "cod_tabela": 128,
+            "descricao": "Á VISTA ICMS 18% 05/2022"
+        },
+        {
+            "cod_tabela": 129,
+            "descricao": "A PRAZO ICMS 12% 06/2022"
+        },
+        {
+            "cod_tabela": 130,
+            "descricao": "Á VISTA ICMS 12% 06/2022"
+        },
+        {
+            "cod_tabela": 131,
+            "descricao": "A PRAZO ICMS 7%  06/2022"
+        },
+        {
+            "cod_tabela": 132,
+            "descricao": "Á VISTA ICMS 7% 06/2022"
+        },
+        {
+            "cod_tabela": 133,
+            "descricao": "A PRAZO ICMS 18% 06/2022"
+        },
+        {
+            "cod_tabela": 134,
+            "descricao": "Á VISTA ICMS 18% 06/2022"
+        },
+        {
+            "cod_tabela": 135,
+            "descricao": "AB CIOSP S/ IPI"
+        },
+        {
+            "cod_tabela": 136,
+            "descricao": "AB CIOSP C/ IPI"
+        },
+        {
+            "cod_tabela": 902,
+            "descricao": "ALTERAÇÃO DO VALOR UN"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

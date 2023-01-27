@@ -1,0 +1,87 @@
+get:
+  tags:
+    - Customer
+  summary: Get Customer By CNPJ
+  description: Retrieve the infos about the customer by passing his cnpj
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "cod_cliente": 30,
+            "descricao_cliente": "L A DALLA PORTA JUNIOR",
+            "nome_fantasia": "JUNIMED",
+            "tp_pessoa": "J",
+            "cnpj_cpf": "11145401000156",
+            "revisado": "SIM",
+            "cep": 97065290,
+            "endereco": "RUA PASCOAL GOMES LIBRELOTTO, 20",
+            "nr_endereco": "20",
+            "complemento": "1ª ANDAR",
+            "bairro": "DOM ANTONIO REIS",
+            "cidade": "SANTA MARIA",
+            "uf": "RS",
+            "pais": "BRASIL",
+            "email": "licitacao_rs@hotmail.com",
+            "ddd": "055",
+            "telefone": "3025-9900",
+            "cod_tab_venda": 106,
+            "descr_tab_venda": "A PRAZO ICMS 12% 02/2022",
+            "cod_cond_pgto": null,
+            "descr_cond_pgto": null,
+            "insc_est": "1090346767",
+            "cod_representante": 1,
+            "representante": "SCHUSTER COMERCIO DE EQUIPAMENTOS ODONTOLOGICOS LTDA",
+            "cod_transportadora": 4,
+            "transportadora": "O MESMO"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

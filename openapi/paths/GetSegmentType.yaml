@@ -1,0 +1,79 @@
+get:
+  tags:
+    - Customer
+  summary: Get Segment types
+  description: Retrieve the Segment Types!
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "cod_segmer": 1,
+            "descricao": "CONSUMIDOR"
+        },
+        {
+            "cod_segmer": 2,
+            "descricao": "DENTARIA"
+        },
+        {
+            "cod_segmer": 3,
+            "descricao": "DENTISTA"
+        },
+        {
+            "cod_segmer": 4,
+            "descricao": "ORGAO PUBLICO"
+        },
+        {
+            "cod_segmer": 5,
+            "descricao": "CLIENTE EXPORTACAO"
+        },
+        {
+            "cod_segmer": 6,
+            "descricao": "CLINICA"
+        },
+        {
+            "cod_segmer": 7,
+            "descricao": "LICITACAO"
+        },
+        {
+            "cod_segmer": 8,
+            "descricao": "AT ODONTOLOGICA"
+        },
+        {
+            "cod_segmer": 9,
+            "descricao": "REPRESENTANTE"
+        },
+        {
+            "cod_segmer": 10,
+            "descricao": "CLIENTE EXPORTACAO INDIRETA"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

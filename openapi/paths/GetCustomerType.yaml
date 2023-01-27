@@ -1,0 +1,114 @@
+get:
+  tags:
+    - Customer
+  summary: Get Customer Types
+  description: Retrieve the types of customer!
+  parameters:
+    - in: query
+      name: CNPJ_CPF
+      schema:
+        type: integer
+      required: true
+      description: CNPJ or CPF of the customer
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "cod_tp_cli": 1,
+            "descricao": "CONSUMIDOR FINAL"
+        },
+        {
+            "cod_tp_cli": 2,
+            "descricao": "LOJISTA"
+        },
+        {
+            "cod_tp_cli": 3,
+            "descricao": "AT CREDENCIADA"
+        },
+        {
+            "cod_tp_cli": 4,
+            "descricao": "AT AUTORIZADA"
+        },
+        {
+            "cod_tp_cli": 5,
+            "descricao": "FORNECEDOR"
+        },
+        {
+            "cod_tp_cli": 6,
+            "descricao": "REPRESENTANTE"
+        },
+        {
+            "cod_tp_cli": 7,
+            "descricao": "SINDICATO"
+        },
+        {
+            "cod_tp_cli": 8,
+            "descricao": "QUARTEL"
+        },
+        {
+            "cod_tp_cli": 9,
+            "descricao": "ASSISTENCIA TECNICA"
+        },
+        {
+            "cod_tp_cli": 10,
+            "descricao": "HOSPITAL"
+        },
+        {
+            "cod_tp_cli": 11,
+            "descricao": "PREFEITURA"
+        },
+        {
+            "cod_tp_cli": 12,
+            "descricao": "UNIVERSIDADE"
+        },
+        {
+            "cod_tp_cli": 13,
+            "descricao": "DENTARIA"
+        },
+        {
+            "cod_tp_cli": 14,
+            "descricao": "FUNDO ESTADUAL"
+        },
+        {
+            "cod_tp_cli": 15,
+            "descricao": "FUNDO MUNICIPAL"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          example:
+            {}
+    required: true

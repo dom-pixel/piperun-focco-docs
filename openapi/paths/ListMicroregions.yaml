@@ -1,0 +1,46 @@
+get:
+  tags:
+    - Customer
+  summary: a
+  description: a
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {}
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          example:
+            {}
+    required: true

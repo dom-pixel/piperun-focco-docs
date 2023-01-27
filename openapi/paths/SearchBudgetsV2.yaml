@@ -1,1 +1,115 @@
+get:
+  tags:
+    - Budget
+  summary: Search Budgets V2
+  description: Searches all the budgets from the user!
+  parameters:
+    - in: query
+      name: cnpj
+      schema:
+        type: integer
+      required: true
+      description: CNPJ of the user
 
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "empr_id": 1,
+            "pdv_id": 287366,
+            "num_pedido": -23188,
+            "dt_geracao": "2023-01-27T11:31:05",
+            "num_ped_repr": null,
+            "ordem_cpr": null,
+            "dt_emissao": "2023-01-27T00:00:00",
+            "cod_cliente": 30,
+            "cliente": "L A DALLA PORTA JUNIOR",
+            "cnpj": 11145401000156,
+            "cpf": null,
+            "endereco": "RUA PASCOAL GOMES LIBRELOTTO, 20",
+            "complemento": "1ª ANDAR",
+            "bairro": "DOM ANTONIO REIS",
+            "cep": 97065290,
+            "cidade": "SANTA MARIA",
+            "uf": "RS",
+            "sit_pdv": "BLQ",
+            "pos_pdv": "PE",
+            "cond_pgto": "15/30/45/60/75/90 DIAS",
+            "cod_repres": 2,
+            "representante": "PJM RIO COMERCIO E REPRESENTACOES LTDA",
+            "email_representante": "miltonjose30@gmail.com",
+            "cod_tabela": 131,
+            "tabela": "A PRAZO ICMS 7%  06/2022",
+            "vlr_bruto": 22,
+            "vlr_desc": 0,
+            "vlr_acres": 0,
+            "vlr_frete": 0,
+            "vlr_liq": 22,
+            "vlr_ipi": 0,
+            "vlr_liq_ipi": 22,
+            "perc_comis": 5,
+            "vlr_icms": 2.64,
+            "vlr_desc_zf": 0,
+            "tp_frete": "O",
+            "cod_transp": 4,
+            "transportadora": "O MESMO",
+            "cod_div_venda": 1,
+            "div_venda": "MERCADO INTERNO",
+            "obs_pedido": null,
+            "obs_nota": null,
+            "obs_etiqueta": null,
+            "obs_cliente": "CNAE OK",
+            "obs_web_cliente": null,
+            "obs_estab_cliente": null
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

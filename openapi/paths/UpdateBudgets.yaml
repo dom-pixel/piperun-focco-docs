@@ -1,0 +1,92 @@
+post:
+  tags:
+    - Budget
+  summary: Update Budget
+  description: Updates the item quantity from a budget
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "59",
+    "Value": {
+        "$id": "60",
+        "$type": "Focco.Framework.DataAccess.BaseDatabase+<Query>d__41`1[[Focco.ERP.Core.Commands.Comercial.Ecommerce.WebServices.AtualizaItemOrcamentoCommand+Result, Focco.ERP.Core]], Focco.Framework.DataAccess",
+        "$values": [
+            {
+                "$id": "61",
+                "IdOrcamento": 287366,
+                "IdItem": 1075506,
+                "ValorLiquido": 22,
+                "ValorIpi": 0,
+                "ValorSubIcms": 0
+            }
+        ]
+    },
+    "InnerSingleStatuses": [],
+    "Succeeded": true,
+    "AnySucceeded": false,
+    "Failed": false,
+    "AllFailed": false,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "",
+    "Exception": null
+}
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "62",
+    "Value": null,
+    "InnerSingleStatuses": [
+        {
+            "$id": "63",
+            "ErrorMessage": "Não foi encontrado o item informado para atualização no orçamento.",
+            "Exception": null,
+            "Succeeded": false,
+            "Failed": true
+        }
+    ],
+    "Succeeded": false,
+    "AnySucceeded": false,
+    "Failed": true,
+    "AllFailed": true,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "Não foi encontrado o item informado para atualização no orçamento.",
+    "Exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          example:
+            {
+    "itemId": 1075506,
+    "quantidade": 1
+}
+    required: true

@@ -21,20 +21,51 @@ paths:
   /budgets/add:
     $ref: paths/CreateBudget.yaml
   /budget/request/:id:
-    $ref:
+    $ref: paths/RequestBudgetById.yaml
   /budget/update:
     $ref: paths/UpdateBudgets.yaml
   /budget/payment-terms:
     $ref: paths/PaymentTerms.yaml
+  /budget/deleteBudget/:id:
+    $ref: paths/DeleteBudget.yaml
   /budget/deleteItem/:id:
     $ref: paths/DeleteItemById.yaml
   /v2/budget/add:
     $ref: paths/CreateBudgetV2.yaml
-  /budgets/:
+  /budgets:
     $ref: paths/SearchBudgets.yaml
-  /v2/budgets/:
+  /v2/budgets:
     $ref: paths/SearchBudgetsV2.yaml
-  
+  /customer:
+    $ref: paths/GetCustomerByCnpj.yaml
+  /customer/add-customer:
+    $ref: paths/AddCustomer.yaml
+  /customer/inventory-balance:
+    $ref: paths/InventoryBalance.yaml
+  /customer/Items:
+    $ref: paths/GetItemsByCodeTable.yaml
+  /customer/items/get-item-sell-requests:
+    $ref: paths/GetItemSellRequests.yaml
+  /customer/items/get-sell-requests:
+    $ref: paths/GetSellRequests.yaml
+  /customer/list-all:
+    $ref: paths/ListAllCustomers.yaml
+  /customer/list-representative:
+    $ref: paths/ListRepresentative.yaml
+  /customer/microregions:
+    $ref: paths/ListMicroregions.yaml
+  /customer/microregions-by-city:
+    $ref: paths/ListMicroregionsByCity.yaml
+  /customer/type-customer:
+    $ref: paths/GetCustomerType.yaml
+  /customer/type-sales:
+    $ref: paths/GetSalesType.yaml
+  /customer/type-segment:
+    $ref: paths/GetSegmentType.yaml
+  /export/list-shipping-companies:
+    $ref: paths/ListShippingCompanies.yaml
+  /export/list-shipping-types:
+    $ref: paths/ListShippingTypes.yaml
   /generate-pdf:
     $ref: paths/GeneratePdf.yaml
 components:

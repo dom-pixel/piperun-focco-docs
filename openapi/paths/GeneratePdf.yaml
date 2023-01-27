@@ -17,7 +17,7 @@ post:
               value:
                 Returns a base64 encoded pdf
     "422":
-      description: Internal Server Error 
+      description: Bad Request 
       content:
         application/json:
           schema:

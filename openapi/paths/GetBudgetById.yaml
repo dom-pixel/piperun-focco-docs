@@ -52,7 +52,7 @@ get:
     "Exception": null
 }
     "400":
-      description: Internal Server Error 
+      description: Bad Request 
       content:
         application/json:
           schema:

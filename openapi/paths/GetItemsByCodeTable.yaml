@@ -1,0 +1,605 @@
+get:
+  tags:
+    - Customer
+  summary: Get Items by Code Table
+  description: a
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [
+        {
+            "cod_tabela": 131,
+            "cod_item": "1000",
+            "desc_tecnica": "AMALGAMADOR VIBRAMAT AUTOMATICO 1 VEL BIVOLT 127/220",
+            "preco": 300,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101717",
+            "desc_tecnica": "PONTEIRA ACABADA CLAREAM 3D EM A FIT",
+            "preco": 22,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101718",
+            "desc_tecnica": "PONTEIRA ACABADA CLAREAM 1D EM A FIT",
+            "preco": 14,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101720",
+            "desc_tecnica": "PONTEIRA COMPLETA CLAREAM FOTOPOLIMERIZADOR 1D EM B/B SUPRA/C/D",
+            "preco": 14,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101721",
+            "desc_tecnica": "PONTEIRA COMPLETA CLAREAM FOTOPOLIMERIZADOR 3D EM B/B SUPRA/C/D",
+            "preco": 22,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101735",
+            "desc_tecnica": "PONTEIRA ACABADA CLAREAM 1D EM G",
+            "preco": 14,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "101736",
+            "desc_tecnica": "PONTEIRA ACABADA CLAREAM 3D EM G",
+            "preco": 22,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "13000",
+            "desc_tecnica": "GABINETE METALICO SUCTRON 294,0X235,0X356,0MM",
+            "preco": 337.6,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "20000",
+            "desc_tecnica": "AMALGAMADOR VIBRAMAT CAPSULAR SPEED II 2 VEL BIVOLT AUT 127/220",
+            "preco": 1126.9,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "21000",
+            "desc_tecnica": "KIT SUCTOR SUCTRON I 1S SF",
+            "preco": 445.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "22000",
+            "desc_tecnica": "KIT SUCTOR SUCTRON II 1S CF",
+            "preco": 522.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "23000",
+            "desc_tecnica": "KIT SUCTOR SUCTRON IV 2S CF",
+            "preco": 619.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "24000",
+            "desc_tecnica": "BOMBA VACUO SUCTRON PRATIC 1 CONS 0,33CV BIVOLT 127/220",
+            "preco": 3249.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "25000",
+            "desc_tecnica": "BOMBA VACUO SUCTRON ELETRONIC 5 CONS 1,0CV BIVOLT 127/220",
+            "preco": 3425.9,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "26000",
+            "desc_tecnica": "PROFILAXIA ULTRASSOM SONIC EVO LED BIVOLT 127/220",
+            "preco": 1785.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "27000",
+            "desc_tecnica": "KIT SUCTOR SUCTRON III 2S SF",
+            "preco": 555,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "28000",
+            "desc_tecnica": "BOMBA VACUO SUCTRON ELETRONIC PLUS 2 CONS 0,5CV BIVOLT 127/220",
+            "preco": 3085.6,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "29000",
+            "desc_tecnica": "BOMBA VACUO SUCTRON PREMIUM 7 CONS 1,5CV BIVOLT 127/220",
+            "preco": 3780.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "301000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S3 PUSH LED",
+            "preco": 1547.43,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "302000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S4 PUSH LED",
+            "preco": 1878.13,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "307000",
+            "desc_tecnica": "CIRURGIA OSSEA ULTRASSOM SW SURGERY II LED BIVOLT AUT 100/240",
+            "preco": 19306.1,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "309000",
+            "desc_tecnica": "COMPRESSOR DE AR S60 MAX 51L 220V GIII",
+            "preco": 6425.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "310000",
+            "desc_tecnica": "COMPRESSOR DE AR S120 120L 220V GIII",
+            "preco": 12855.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "311000",
+            "desc_tecnica": "COMPRESSOR DE AR S45 40L 127V GIII",
+            "preco": 4001.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "312000",
+            "desc_tecnica": "COMPRESSOR DE AR S45 40L 220V GIII",
+            "preco": 4001.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "313000",
+            "desc_tecnica": "COMPRESSOR DE AR S50 45L 127V GIII",
+            "preco": 4587.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "314000",
+            "desc_tecnica": "COMPRESSOR DE AR S50 45L 220V GIII",
+            "preco": 4587.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "315000",
+            "desc_tecnica": "DESTILADOR DE AGUA WATER CLEAN 4L 220V 50/60HZ",
+            "preco": 874.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "316000",
+            "desc_tecnica": "DESTILADOR DE AGUA WATER CLEAN 4L 127V 50/60HZ",
+            "preco": 874.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "318000",
+            "desc_tecnica": "PROFILAXIA ULTRASSOM E JATO JETLAX SONIC LED BIVOLT 127/220",
+            "preco": 2901,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "319000",
+            "desc_tecnica": "PROFILAXIA ULTRASSOM E JATO JETLAX SONIC BP II LED BIVOLT 127/220",
+            "preco": 3204.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "32000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S3 PUSH",
+            "preco": 1308.83,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "320000",
+            "desc_tecnica": "PROFILAXIA ULTRASSOM SONICLAX BP LED BIVOLT 127/220",
+            "preco": 2005.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "321000",
+            "desc_tecnica": "LOCALIZADOR APICAL FINEPEX LINK 4,5\" BIVOLT AUT 100-240",
+            "preco": 1530,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "322000",
+            "desc_tecnica": "MOTOR ENDODONTICO C/CONECTIVIDADE ENDOPEN 1,0\" BIVOLT AUT 100-240",
+            "preco": 3112.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "324000",
+            "desc_tecnica": "PECA MAO CONTRA ANGULO CM5W LED PB QUADRUPLO 1:5 PRATA AC ALUMINIO",
+            "preco": 2461.6,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "328000",
+            "desc_tecnica": "MICROMOTOR CLINICO ELETRICO E-VOLT S/ CONTRA ANGULO 3,5\" BIVOLT AUT 10",
+            "preco": 5634.7,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "329000",
+            "desc_tecnica": "GABINETE ACABADO SUCTRON BOMBA VACUO SE/SEP/SPREM",
+            "preco": 337.6,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "330000",
+            "desc_tecnica": "FOTOPOLIMERIZADOR EMITTER NOW BLACK POLIMERIZADOR BIVOLT AUT 100-240",
+            "preco": 2625.5,
+            "dt_alteracao": "2023-01-16T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "331000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z10S STANDARD SIMPLES PB PRATA AZ ALUMINIO",
+            "preco": 497.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "34000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S3 CLASSIC",
+            "preco": 1181.63,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "35000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S4 PUSH",
+            "preco": 1662.43,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "36000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER B POLIMERIZADOR CLAREADOR BIVOLT AUT 100-240",
+            "preco": 746.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "37000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER C POLIMERIZADOR CLAREADOR BIVOLT AUT 100-240",
+            "preco": 707.7,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "38000",
+            "desc_tecnica": "LAVADORA ULTRASSONICA L100 2,6L 220V",
+            "preco": 822.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "39000",
+            "desc_tecnica": "PROFILAXIA JATO BICARBONATO JETLAXIS UNO",
+            "preco": 376.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "40000",
+            "desc_tecnica": "LAVADORA ULTRASSONICA L100 2,6L 127V",
+            "preco": 822.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "47000",
+            "desc_tecnica": "FOTOPOLIMERIZADOR EMITTER NOW POLIMERIZADOR BIVOLT AUT 100-240",
+            "preco": 962.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "48000",
+            "desc_tecnica": "FOTOPOLIMERIZADOR EMITTER NOW DUO POLIMERIZADOR BIVOLT AUT 100-240",
+            "preco": 1644.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "52000",
+            "desc_tecnica": "KIT ACADEMICO PECAS MAO S4 CLASSIC",
+            "preco": 1508.53,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "56000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER D POLIMERIZADOR CLAREADOR PTO BIVOLT AUT 100-240",
+            "preco": 862,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "57000",
+            "desc_tecnica": "LAVADORA ULTRASSONICA L220 3,0L 127V",
+            "preco": 1274.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "61000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z10T TORQUE SIMPLES PB PRATA ALUMINIO",
+            "preco": 497.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "62000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25S STANDARD TRIPLO PB PRATA ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "63000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25S STANDARD TRIPLO PB AZUL ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "64000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25S STANDARD TRIPLO PB PRETA ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "65000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25T TORQUE TRIPLO PB PRATA ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "66000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25T TORQUE TRIPLO PB AZUL ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "67000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z25T TORQUE TRIPLO PB PRETA ALUMINIO",
+            "preco": 551.2,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "68000",
+            "desc_tecnica": "LAVADORA ULTRASSONICA L220 3,0L 220V",
+            "preco": 1274.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "69000",
+            "desc_tecnica": "PECA MAO CONTRA ANGULO T10 TRAVA SIMPLES 1:1 PRATA ALUMINIO",
+            "preco": 425.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "71000",
+            "desc_tecnica": "PECA MAO CONTRA ANGULO T20 PB SIMPLES 1:1 PRATA ALUMINIO",
+            "preco": 529.4,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "72000",
+            "desc_tecnica": "MOTOR ENDODONTICO C/LOCAL APICAL SENSORY 2,8\" BIVOLT AUT 100-240",
+            "preco": 5488.1,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "73000",
+            "desc_tecnica": "PECA MAO MICROMOTOR X10 BORDEN EXTERNA PRATA ALUMINIO",
+            "preco": 495,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "74000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z48SL LED STANDARD QUINTUPLO PB PRATA AC LATAO",
+            "preco": 1094.4,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "75000",
+            "desc_tecnica": "PECA MAO PECA RETA P10 GIRO ANEL SIMPLES 1:1 PRATA ALUMINIO",
+            "preco": 442.4,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "78000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER G POLIMERIZADOR CLAREADOR BIVOLT AUT 100-240",
+            "preco": 551.1,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "79000",
+            "desc_tecnica": "LOCALIZADOR APICAL FINEPEX 4,5\" BIVOLT AUT 100-240",
+            "preco": 1328.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "80000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER A FIT POLIMERIZADOR CLAREADOR BIVOLT AUT 100-240",
+            "preco": 480.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "81000",
+            "desc_tecnica": "AUTOCLAVE GRAVITACIONAL LINEA N 22L 127/220V",
+            "preco": 5718.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "82000",
+            "desc_tecnica": "AUTOCLAVE VACUO FRACIONADO LINEA B 22L 127V",
+            "preco": 16177,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "83000",
+            "desc_tecnica": "AUTOCLAVE VACUO FRACIONADO LINEA B 22L 220V",
+            "preco": 16177,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "88000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z35T TORQUE TRIPLO PB PRATA LATAO",
+            "preco": 582.3,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "89000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z46SL LED STANDARD TRIPLO PB PRATA AC LATAO",
+            "preco": 895.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "90000",
+            "desc_tecnica": "PECA MAO ALTA ROTACAO Z46TL LED TORQUE TRIPLO PB PRATA AC LATAO",
+            "preco": 895.5,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "97000",
+            "desc_tecnica": "COMPRESSOR DE AR S60 51L 127V GIII",
+            "preco": 6073.4,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "98000",
+            "desc_tecnica": "FOTOCLAREADOR EMITTER B SUPRA POLIMERIZADOR CLAREADOR BIVOLT AUT 100-2",
+            "preco": 925.8,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        },
+        {
+            "cod_tabela": 131,
+            "cod_item": "99000",
+            "desc_tecnica": "COMPRESSOR DE AR S60 51L 220V GIII",
+            "preco": 6073.4,
+            "dt_alteracao": "2023-01-08T00:00:00"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "400":
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)

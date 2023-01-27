@@ -47,8 +47,8 @@ post:
     "ErrorMessage": "",
     "Exception": null
 }
-    "400":
-      description: Internal Server Error 
+    "404":
+      description: Not Found
       content:
         application/json:
           schema:

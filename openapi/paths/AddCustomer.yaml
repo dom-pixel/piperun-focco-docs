@@ -1,0 +1,89 @@
+post:
+  tags:
+    - Customer
+  summary: Create Customer
+  description: Create a customer! If using CNPJ, do not pass cpf.
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "value": {
+        "clienteId": 85305,
+        "clienteCodigo": 11695,
+        "estabelecimentoId": 15554,
+        "estabelecimentoCodigo": 1,
+        "mensagens": [
+            {
+                "mensagem": "Cliente \"11695\" criado com sucesso na empresa 1.",
+                "tipo": "success"
+            }
+        ]
+    },
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
+
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          example:
+            {
+    "nome": "Teste",
+    "codigoSegmentoMercado": 6,
+    "codigoTipoCliente": 1,
+    "nomeEstabelecimento": "Teste",
+    "nomeFantasia": "Teste",
+    "cnpj": "84689184000139",
+    "inscricaoEstadual": "811556131",
+    "cep": 58706015,
+    "logradouro": "Rua Maria Vicência Nóbrega",
+    "numero": "0",
+    "bairro": "São Sebastião",
+    "codigoMicrorregiao": 438,
+    "codigoCidade": 12580,
+    "codigotabelaVenda": 131,
+    "ddd": "49",
+    "numeroTeledone": "734823941",
+    "TipoDeTelefone": "M",
+    "email": "teste@teste.com",
+    "codigoRepresentante": 1,
+    "codigoTransportadora": 4
+}
+    required: true
