@@ -1,8 +1,8 @@
 get:
   tags:
     - Customer
-  summary: a
-  description: a
+  summary: List Microregions by City
+  description: Returns specific microregions with the same cod_mreg
   security:
     - Token: []
   responses:
@@ -15,7 +15,46 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [
+        {
+            "cod_mreg": 526,
+            "descricao": "RR-BOA VISTA",
+            "cod_cid": 66222,
+            "cidade": "ALTO ALEGRE",
+            "uf": "RR"
+        },
+        {
+            "cod_mreg": 526,
+            "descricao": "RR-BOA VISTA",
+            "cod_cid": 66230,
+            "cidade": "BOA VISTA",
+            "uf": "RR"
+        },
+        {
+            "cod_mreg": 526,
+            "descricao": "RR-BOA VISTA",
+            "cod_cid": 106992,
+            "cidade": "PACARAIMA",
+            "uf": "RR"
+        },
+        {
+            "cod_mreg": 526,
+            "descricao": "RR-BOA VISTA",
+            "cod_cid": 106984,
+            "cidade": "AMAJARI",
+            "uf": "RR"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "400":
       description: Bad Request 
       content:
@@ -25,7 +64,17 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "401":
       description: Unauthorized
       content:
@@ -36,11 +85,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

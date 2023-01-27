@@ -1,8 +1,8 @@
 get:
   tags:
     - Customer
-  summary: a
-  description: a
+  summary: Inventory Balance
+  description: return the Inventory balance!
   security:
     - Token: []
   responses:
@@ -15,7 +15,24 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [
+        {
+            "cod_item": "1000",
+            "estoque": "20",
+            "comprometido": "0",
+            "saldo_disponivel": "20"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "400":
       description: Bad Request 
       content:
@@ -25,7 +42,17 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "401":
       description: Unauthorized
       content:
@@ -36,11 +63,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

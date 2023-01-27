@@ -1,8 +1,8 @@
 get:
   tags:
     - Customer
-  summary: a
-  description: a
+  summary: Get Sell Requests
+  description: Return the sell requests for a Item
   security:
     - Token: []
   responses:
@@ -15,7 +15,44 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [
+        {
+            "pdv_id": 287366,
+            "num_item": 1,
+            "dt_entrega": "2023-01-27T00:00:00",
+            "cod_item": "101717",
+            "desc_tecnica": "PONTEIRA ACABADA CLAREAM 3D EM A FIT",
+            "qtde": 1,
+            "qtde_atend": 0,
+            "qtde_canc": 0,
+            "qtde_sldo": 1,
+            "perc_comis": 5,
+            "preco_unit": 22,
+            "vlr_bruto": 22,
+            "vlr_desc": 0,
+            "vlr_acres": 0,
+            "vlr_liq": 22,
+            "vlr_ipi": 0,
+            "vlr_liq_ipi": 22,
+            "vlr_total": 22,
+            "ncm": "90184999",
+            "cfop": 5102,
+            "vlr_icms": 2.6400024,
+            "aliq_icms": 17,
+            "vlr_desc_zf": 0,
+            "cst": "00"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "400":
       description: Bad Request 
       content:
@@ -46,11 +83,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

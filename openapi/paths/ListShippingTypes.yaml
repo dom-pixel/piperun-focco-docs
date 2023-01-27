@@ -1,8 +1,8 @@
 get:
   tags:
-    - Customer
-  summary: a
-  description: a
+    - Export
+  summary: List Shipping Types
+  description: Return all the shipping types
   security:
     - Token: []
   responses:
@@ -15,17 +15,58 @@ get:
           examples:
             response:
               value:
-                {}
-    "400":
-      description: Bad Request 
-      content:
-        application/json:
-          schema:
-            type: string
-          examples:
-            response:
-              value:
-                {}
+                {
+    "value": [
+        {
+            "tipo_frete": "Cif-Contrat.",
+            "sigla": "C"
+        },
+        {
+            "tipo_frete": "Daf",
+            "sigla": "D"
+        },
+        {
+            "tipo_frete": "Cif-Próprio",
+            "sigla": "E"
+        },
+        {
+            "tipo_frete": "Fob-Contrat.",
+            "sigla": "F"
+        },
+        {
+            "tipo_frete": "Fob-Próprio",
+            "sigla": "I"
+        },
+        {
+            "tipo_frete": "Sem Frete",
+            "sigla": "N"
+        },
+        {
+            "tipo_frete": "Convenio",
+            "sigla": "O"
+        },
+        {
+            "tipo_frete": "Retira",
+            "sigla": "R"
+        },
+        {
+            "tipo_frete": "Cortesia",
+            "sigla": "S"
+        },
+        {
+            "tipo_frete": "Terceiros",
+            "sigla": "T"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "401":
       description: Unauthorized
       content:
@@ -36,11 +77,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

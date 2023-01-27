@@ -2,7 +2,7 @@ get:
   tags:
     - Customer
   summary: Get Items by Code Table
-  description: a
+  description: Return the itens by the Code Table
   security:
     - Token: []
   responses:

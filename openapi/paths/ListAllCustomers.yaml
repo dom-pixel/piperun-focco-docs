@@ -1,8 +1,8 @@
 get:
   tags:
     - Customer
-  summary: a
-  description: a
+  summary: List All Customers
+  description: Returns a 1 mb json (or more) containing all the registered customers!
   security:
     - Token: []
   responses:
@@ -15,17 +15,10 @@ get:
           examples:
             response:
               value:
-                {}
-    "400":
-      description: Bad Request 
-      content:
-        application/json:
-          schema:
-            type: string
-          examples:
-            response:
-              value:
-                {}
+                {
+    "$id": "6095",
+    "$values": ["A lot of customers"]
+              }
     "401":
       description: Unauthorized
       content:
@@ -36,11 +29,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

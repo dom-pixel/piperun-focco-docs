@@ -1,8 +1,8 @@
 get:
   tags:
     - Customer
-  summary: a
-  description: a
+  summary: List Microregions
+  description: Returns all the microregions, like RR for Roraima
   security:
     - Token: []
   responses:
@@ -15,7 +15,43 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [
+        {
+            "uf": "RR",
+            "cod_mreg": 526,
+            "descricao": "RR-BOA VISTA"
+        },
+        {
+            "uf": "RR",
+            "cod_mreg": 527,
+            "descricao": "RR-CARACARAI"
+        },
+        {
+            "uf": "RR",
+            "cod_mreg": 528,
+            "descricao": "RR-NORDESTE DE RORAIMA"
+        },
+        {
+            "uf": "RR",
+            "cod_mreg": 529,
+            "descricao": "RR-SUDESTE DE RORAIMA"
+        },
+        {
+            "uf": "RR",
+            "cod_mreg": 5912,
+            "descricao": "RORAIMA"
+        }
+    ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "400":
       description: Bad Request 
       content:
@@ -25,7 +61,17 @@ get:
           examples:
             response:
               value:
-                {}
+                {
+    "value": [],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "401":
       description: Unauthorized
       content:
@@ -36,11 +82,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true

@@ -11,6 +11,8 @@ tags:
     description: Budget operations.
   - name: Customer
     description: Customer operations.
+  - name: Export
+    description: Export Operations.
   - name: PDF
     description: Generate PDFs.
 servers:

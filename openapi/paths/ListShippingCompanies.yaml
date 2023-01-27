@@ -1,8 +1,8 @@
 get:
   tags:
-    - Customer
-  summary: a
-  description: a
+    - Export
+  summary: List Shipping Companies
+  description: The name already says
   security:
     - Token: []
   responses:
@@ -15,17 +15,30 @@ get:
           examples:
             response:
               value:
-                {}
-    "400":
-      description: Bad Request 
-      content:
-        application/json:
-          schema:
-            type: string
-          examples:
-            response:
-              value:
-                {}
+                {
+    "value": [
+        {
+            "cod_for": 1639,
+            "descricao": "\tMAGAZINE LUIZA S/A",
+            "nome_fan": "\tMAGAZINE LUIZA",
+            "cnpj": 47960950091330,
+            "endereco": "WILSON TAVARES RIBEIRO, 1400",
+            "complemento": null,
+            "bairro": "CHACARAS REUNIDAS SANTA TEREZI",
+            "cep": 32183680,
+            "cidade": "CONTAGEM",
+            "uf": "MG"
+        },
+        ],
+    "innerSingleStatuses": [],
+    "succeeded": true,
+    "anySucceeded": false,
+    "failed": false,
+    "allFailed": false,
+    "baseErrorMessage": null,
+    "errorMessage": "",
+    "exception": null
+}
     "401":
       description: Unauthorized
       content:
@@ -36,11 +49,3 @@ get:
             response:
               value:
                 Unauthorized (Token not found on request)
-  requestBody:
-    content:
-      application/json:
-        schema:
-          type: string
-          example:
-            {}
-    required: true
