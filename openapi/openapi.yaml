@@ -70,6 +70,8 @@ paths:
     $ref: paths/ListShippingTypes.yaml
   /generate-pdf:
     $ref: paths/GeneratePdf.yaml
+  /a/a:
+    $ref: paths/wow.yaml
 components:
   securitySchemes:
     main_auth:
