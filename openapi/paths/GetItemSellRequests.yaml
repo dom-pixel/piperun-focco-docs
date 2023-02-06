@@ -1,7 +1,7 @@
 get:
   tags:
     - Customer
-  summary: Get Sell Requests
+  summary: Get Item Sell Requests
   description: Return the sell requests for a Item
   security:
     - Token: []
