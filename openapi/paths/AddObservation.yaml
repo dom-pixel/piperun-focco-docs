@@ -1,0 +1,127 @@
+post:
+  tags:
+    - Budget
+  summary: Add Observation to Budget
+  description: Adds observation to a budget!
+  security:
+    - Token: []
+  responses:
+    "200":
+      description: OK
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "12507",
+    "Value": {
+        "$id": "12508",
+        "IdOrcamento": 283935,
+        "Substitui": 1,
+        "ObservacaoPedido": "Teste",
+        "ObservacaoNfs": "Teste"
+    },
+    "InnerSingleStatuses": [],
+    "Succeeded": true,
+    "AnySucceeded": false,
+    "Failed": false,
+    "AllFailed": false,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "",
+    "Exception": null
+}
+    "400":
+      description: Bad Request 
+      content:
+        application/json:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                {
+    "$id": "12509",
+    "Value": null,
+    "InnerSingleStatuses": [
+        {
+            "$id": "12510",
+            "ErrorMessage": "Falha durante a alteração da observação do orçamento (A sequência não contém elementos)",
+            "Exception": {
+                "$id": "12511",
+                "$type": "System.InvalidOperationException, mscorlib",
+                "ClassName": "System.InvalidOperationException",
+                "Message": "A sequência não contém elementos",
+                "Data": null,
+                "InnerException": null,
+                "HelpURL": null,
+                "StackTraceString": "   em System.Linq.Enumerable.First[TSource](IEnumerable`1 source)\r\n   em Dapper.SqlMapper.ThrowZeroRows(Row row)\r\n   em Dapper.SqlMapper.QueryRowImpl[T](IDbConnection cnn, Row row, CommandDefinition& command, Type effectiveType)\r\n   em Dapper.SqlMapper.QueryFirst[T](IDbConnection cnn, String sql, Object param, IDbTransaction transaction, Nullable`1 commandTimeout, Nullable`1 commandType)\r\n   em Focco.Framework.DataAccess.Adapters.DatabaseConnectionAdapter.QueryFirst(AbstractSelectStatement select, IDbTransaction transaction, Nullable`1 commandTimeout)\r\n   em Focco.Framework.DataAccess.BaseDatabase.QueryFirst(AbstractSelectStatement select, Nullable`1 commandTimeout)\r\n   em Focco.ERP.Core.Commands.Comercial.Ecommerce.WebServices.AtualizaObservacaoOrcamentoCommand.Execute(Int64 idOrcamento, String obsPedido, String obsNfs, Nullable`1 substitui)",
+                "RemoteStackTraceString": null,
+                "RemoteStackIndex": 0,
+                "ExceptionMethod": "8\nFirst\nSystem.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089\nSystem.Linq.Enumerable\nTSource First[TSource](System.Collections.Generic.IEnumerable`1[TSource])",
+                "HResult": -2146233079,
+                "Source": "System.Core",
+                "WatsonBuckets": null
+            },
+            "Succeeded": false,
+            "Failed": true
+        }
+    ],
+    "Succeeded": false,
+    "AnySucceeded": false,
+    "Failed": true,
+    "AllFailed": true,
+    "BaseErrorMessage": null,
+    "ErrorMessage": "Falha durante a alteração da observação do orçamento (A sequência não contém elementos)",
+    "Exception": {
+        "$type": "System.AggregateException, mscorlib",
+        "ClassName": "System.AggregateException",
+        "Message": "Um ou mais erros.",
+        "Data": null,
+        "InnerException": {
+            "$ref": "12511"
+        },
+        "HelpURL": null,
+        "StackTraceString": null,
+        "RemoteStackTraceString": null,
+        "RemoteStackIndex": 0,
+        "ExceptionMethod": null,
+        "HResult": -2146233088,
+        "Source": null,
+        "WatsonBuckets": null,
+        "InnerExceptions": {
+            "$id": "12512",
+            "$type": "System.Exception[], mscorlib",
+            "$values": [
+                {
+                    "$ref": "12511"
+                }
+            ]
+        }
+    }
+}
+    "401":
+      description: Unauthorized
+      content:
+        text/plain:
+          schema:
+            type: string
+          examples:
+            response:
+              value:
+                Unauthorized (Token not found on request)
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: string
+          description: The request body
+          example:
+            {
+    "idOrcamento": 283935,
+    "obsPedido": "Teste",
+    "obsNfs": "Teste"
+}
+    required: true

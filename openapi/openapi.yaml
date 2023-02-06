@@ -70,6 +70,8 @@ paths:
     $ref: paths/ListShippingTypes.yaml
   /generate-pdf:
     $ref: paths/GeneratePdf.yaml
+  /budget/addObservation:
+    $ref: paths/AddObservation.yaml
 components:
   securitySchemes:
     main_auth:

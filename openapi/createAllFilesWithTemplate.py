@@ -5,7 +5,7 @@ import os
 n = 0
 
 # OpenAPI YAML file path
-openapi_file = 'openapi.yaml'
+openapi_file = 'openapi/openapi.yaml'
 
 # Read the OpenAPI YAML file
 with open(openapi_file, 'r') as f:
