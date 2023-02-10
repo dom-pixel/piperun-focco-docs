@@ -3,6 +3,13 @@ get:
     - Customer
   summary: Get Customer By CNPJ
   description: Retrieve the infos about the customer by passing his cnpj
+  parameters:
+    - in: query
+      name: CNPJ_CPF
+      schema:
+        type: integer
+      required: true
+      description: CNPJ or CPF of the user/customer
   security:
     - Token: []
   responses:

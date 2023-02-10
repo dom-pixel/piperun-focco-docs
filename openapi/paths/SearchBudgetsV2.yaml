@@ -5,11 +5,11 @@ get:
   description: Searches all the budgets from the user!
   parameters:
     - in: query
-      name: cnpj
+      name: pdv_id
       schema:
         type: integer
       required: true
-      description: CNPJ of the user
+      description: Id of the budget
 
   security:
     - Token: []

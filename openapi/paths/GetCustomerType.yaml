@@ -3,13 +3,6 @@ get:
     - Customer
   summary: Get Customer Types
   description: Retrieve the types of customer!
-  parameters:
-    - in: query
-      name: CNPJ_CPF
-      schema:
-        type: integer
-      required: true
-      description: CNPJ or CPF of the customer
   security:
     - Token: []
   responses:

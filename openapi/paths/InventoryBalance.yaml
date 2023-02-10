@@ -3,6 +3,13 @@ get:
     - Customer
   summary: Inventory Balance
   description: return the Inventory balance!
+  parameters:
+    - in: query
+      name: COD_ITEM
+      schema:
+        type: integer
+      required: true
+      description: Code of the item
   security:
     - Token: []
   responses:

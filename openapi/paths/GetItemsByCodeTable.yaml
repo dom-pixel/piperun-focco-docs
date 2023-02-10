@@ -3,6 +3,13 @@ get:
     - Customer
   summary: Get Items by Code Table
   description: Return the itens by the Code Table
+  parameters:
+    - in: query
+      name: PDV_ID
+      schema:
+        type: integer
+      required: true
+      description: Id of the budget
   security:
     - Token: []
   responses:
